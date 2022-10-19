@@ -1,0 +1,12 @@
+.accordion-button {
+    background-color: black;
+    color: wheat;
+}
+.accordion-button:not(.collapsed) {
+    color: yellow;
+    background-color: black;
+}
+strong {
+    font-weight: bolder;
+    color: yellow;
+}

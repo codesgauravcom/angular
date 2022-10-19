@@ -1,0 +1,120 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="">{{title}}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active"routerLink="">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"routerLink="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"routerLink="/services">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"routerLink="/gallery">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"routerLink="/contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"routerLink="/api">Api</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"routerLink="/team">Team</a>
+        </li>
+       
+        
+        <li class="nav-item">
+          <a class="nav-link active"routerLink="/faq">Faq</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"routerLink="/blog">Blog</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link active"routerLink="/products">Products</a>
+        </li>
+        <button routerLink="cart" class="btn btn-primary">
+          <i class="fa-solid fa-cart-arrow-down"></i>
+          <div style="font-size: 10px;" class="badge bg-danger"></div>
+      </button>
+      </ul>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+
+
+<div class="footer">
+  <div class="inner-footer">
+
+<!--  for company name and description -->
+    <div class="footer-items">
+      <h1>Digi-Era</h1>
+      <p>Come,Let's go one step ahead.</p>
+    </div>
+
+<!--  for quick links  -->
+    <div class="footer-items">
+      <h3>Quick Links</h3>
+      <div class="border1"></div> <!--for the underline -->
+        <ul>
+          <a class="new" href=""><li>Home</li></a>
+          <a class="new"  href="/gallery"><li>Gallery</li></a>
+          <a class="new"  href="/contact"><li>Contact</li></a>
+          <a class="new"  href="about"><li>About</li></a>
+        </ul>
+    </div>
+
+<!--  for some other links -->
+    <div class="footer-items">
+      <h3>Services</h3>
+      <div class="border1"></div>  <!--for the underline -->
+        <ul>
+          <a class="new"  href="https://en.wikipedia.org/wiki/Web_development"><li>Web Development</li></a>
+          <a class="new"  href="https://en.wikipedia.org/wiki/Search_engine_optimization"><li>SEO</li></a>
+          <a class="new"  href="https://en.wikipedia.org/wiki/Business_development"><li>Business Growth</li></a>
+          <a  class="new"  href="https://en.wikipedia.org/wiki/Plan"><li>Plans</li></a>
+        </ul>
+    </div>
+
+<!--  for contact us info -->
+    <div class="footer-items">
+      <h3>Contact us</h3>
+      <div class="border1"></div>
+        <ul>
+          <li><i class="fa fa-map-marker" aria-hidden="true"></i>Noida</li>
+          <li><i class="fa fa-phone" aria-hidden="true"></i>9911895657</li>
+          <li><i class="fa fa-envelope" aria-hidden="true"></i>Gaurav.singh1@trangile.com</li>
+          <li><i class="fa fa-clock"></i>{{todaydate|date:'shortTime'}}</li>
+
+        </ul> 
+      
+<!--   for social links -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/thegrv.chauhan/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/login/"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.google.com/"><i class="fab fa-google-plus-square"></i></a>
+        </div> 
+    </div>
+  </div>
+  
+<!--   Footer Bottom start  -->
+  <div class="footer-bottom">
+    Copyright &copy; Digi-Era 2022.
+    <div *ngFor="let a of weekdays">
+      <ng-container *ngIf="(a=='Sunday' || a=='Saturday');">
+    <p>{{a}}:Holiday </p>
+      </ng-container>
+     
+    
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,8 @@
+<div class="container-fluid" *ngIf="newsData">
+    <br/>
+    <div class="row" >
+        <div class="col-md-4" *ngFor="let n of newsData">
+    <img src={{n.urlToImage}} height="200px" width="300px"/>
+<p>{{n.author}}</p>
+    </div>
+ </div>

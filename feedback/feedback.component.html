@@ -1,0 +1,80 @@
+<div class="container-fluid">
+  <br/>
+  <div class="card">
+    <div class="card-body">
+      <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
+        <div class="row col-md-12">
+          <div class="form-group col-md-10">
+          <label class="col-form-label">First Name</label>
+          <input type="text"  pattern="^[A-Z][a-zA-Z0-9]{1,19}$" required ngModel #fname="ngModel"  class="form-control" name="firstname" />
+          <div *ngIf="fname.touched && !fname.valid">
+            <div *ngIf="fname.errors?.['required']" class="text-danger">
+              First name is required
+
+            </div>
+            <div *ngIf="fname.errors?.['pattern']" class="text-danger">
+Only Alphabates are required and First letter should be capital
+            </div>
+
+          </div>
+        </div>
+        <div class="form-group col-md-10">
+          <label class="col-form-label">Last Name</label>
+          <input type="text"  pattern="[A-Z][a-zA-Z0-9]{1,19}$" required #lname="ngModel" ngModel class="form-control" name="lastname" />
+          <div *ngIf="lname.touched && !lname.valid">
+            <div *ngIf="lname.errors?.['required']" class="text-danger">
+              Last name is required
+
+            </div>
+            <div *ngIf="lname.errors?.['pattern']" class="text-danger">
+              Only Alphabates are required and First letter should be capital
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="form-group col-md-10">
+          <label class="col-form-label">Contact Number</label>
+<input type="text"  pattern="^[0-9]{10}$" class="form-control" required ngModel #phone="ngModel" name="phone" />
+<div *ngIf="phone.touched && !phone.valid">
+  <div *ngIf="phone.errors?.['required']" class="text-danger">
+    Phone number is required
+
+  </div>
+  <div *ngIf="phone.errors?.['pattern']" class="text-danger">
+Only Numbers are required and 10 digits are compulsary
+  </div>
+
+</div>        
+</div>
+
+        <div class="form-group col-md-10">
+          <label class="col-form-label">Email</label>
+<input type="text"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" required ngModel #email="ngModel" name="email" />
+<div *ngIf="email.touched && !email.valid">
+  <div *ngIf="email.errors?.['required']" class="text-danger">
+    Email is required
+
+  </div>
+  <div *ngIf="email.errors?.['pattern']" class="text-danger">
+Not a valid Email
+  </div>
+
+</div>          
+</div>
+
+        <div class="form-group col-md-10">
+<button class="btn btn-primary" [disabled]="!contactForm.valid">Submit</button>
+        </div>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+<br/>
+</div>

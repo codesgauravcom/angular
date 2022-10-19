@@ -1,0 +1,9 @@
+figure{
+    position: relative;
+    /*	-webkit-animation: gaurav;*/
+    animation: gaurav 8s infinite ;
+}
+@keyframes gaurav{
+    0%{left: 0px;top: 0px;}
+    25%{background: tomato;  left: 1200px;top: 0px;}
+}
